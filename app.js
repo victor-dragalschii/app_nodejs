@@ -1,5 +1,5 @@
-const express = require('express')
-const path = require('path')
+const express = require('express') /* Подключение модуля express. Express (фреймворк) - который реализовывает некоторые функции, необходимых для создания приложений и API. */
+const path = require('path') /* Подключение модуля path. Модуль Path обеспечивает способ работы с каталогами и путями файлов. */
 const {v4} = require('uuid')
 const app = express()
 
@@ -43,4 +43,9 @@ app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'client', 'index.html'))
 })
 
-app.listen(3000, () => console.log('Server has been started on port 3000...'))
+/*
+ Запуск сервера методом .listen (указываем порт 3000 на котором будет запущен сервер)
+ В console.log выведим сообщение "Server has been started on port 3000..." если сервер успешно запущен.
+ */
+app.listen(3000, () => console.log('Server has been started on port 3000...')) 
+
