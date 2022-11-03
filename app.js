@@ -1,6 +1,6 @@
 const express = require('express') /* Подключение модуля express. Express (фреймворк) - который реализовывает некоторые функции, необходимых для создания приложений и API. */
 const path = require('path') /* Подключение модуля path. Модуль Path обеспечивает способ работы с каталогами и путями файлов. */
-const {v4} = require('uuid') - /*uuid -Генерирует различные форматы ID */
+const {v4} = require('uuid') /*uuid -Генерирует различные форматы ID */
 const app = express() /* Запускаем модуль Express, данной функцией, в переменной app */
 
 let CONTACTS = [
