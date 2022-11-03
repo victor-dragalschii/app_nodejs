@@ -12,9 +12,9 @@ Vue.component('loader', {
 })
 
 new Vue({
-  el: '#app',
-  data() {
-    return {
+  el: '#app', //указываем корневой эллемент, эллемент app
+  data() {   // в метода data, возвращаем обьект кторый являеться моделями нашего приложения
+    return { 
       loading: false,
       form: {
         name: '',
@@ -29,7 +29,7 @@ new Vue({
     }
   },
   methods: {
-    async createContact() {
+    async createContact() { //async - асинхроно что-то делаем, в данном случае создаем контакт
       const {...contact} = this.form
 
       const newContact = await request('/api/contacts', 'POST', contact)
